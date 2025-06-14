@@ -1,22 +1,19 @@
 [project]
 name = "model-samples"
 version = "0.1.0"
-description = ""
-authors = [
-    {name = "hoanghapham",email = "hoangha.20021992@gmail.com"}
-]
+description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
-    "scikit-learn (>=1.7.0,<2.0.0)",
-    "torch (>=2.7.1,<3.0.0)",
-    "matplotlib (>=3.10.3,<4.0.0)"
+    "matplotlib>=3.10.3",
+    "scikit-learn>=1.7.0",
+    "torch>=2.7.1",
 ]
 
-[tool.poetry]
-packages = [{include = "model_samples", from = "src"}]
+[dependency-groups]
+dev = [
+    "model-samples",
+]
 
-
-[build-system]
-requires = ["poetry-core>=2.0.0,<3.0.0"]
-build-backend = "poetry.core.masonry.api"
+[tool.uv.sources]
+model-samples = { workspace = true }
