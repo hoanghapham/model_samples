@@ -69,7 +69,6 @@ class SimpleSGDClassifier():
         return metrics
     
 
-
 class BaseSGDClassifier(BaseEstimator, ClassifierMixin, ABC):
     """Abstract base class acting as the parent for all Stochastic Gradient Descent classifiers"""
     def __init__(

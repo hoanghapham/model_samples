@@ -1,7 +1,8 @@
 import numpy as np
 import torch
 import matplotlib.pyplot as plt
-from sklearn.metrics import precision_recall_fscore_support
+from typing import Optional
+
 
 def plot_series(losses, title=None, time_unit='epoch', figsize=(8, 5)):
     fig, ax = plt.subplots(figsize=figsize)
@@ -62,4 +63,20 @@ def generate_data():
   label = ((data[:,0]+0.3*data[:,1]) > 0.5).to(torch.int)
   return data[:,0], label
 
+
+class TrainConfig():
+
+    """Convenience object to store training configurations.
+    """
+    def __init__(
+            self, 
+            num_epochs: int,
+            early_stop: bool,
+            violation_limit: int,
+            optimizer_params: Optional[dict] = None,
+        ) -> None:
+        self.optimizer_params   = optimizer_params
+        self.num_epochs         = num_epochs
+        self.violation_limit    = violation_limit
+        self.early_stop        = early_stop
 
