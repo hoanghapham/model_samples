@@ -211,9 +211,6 @@ class SGDClassifier(BaseSGDClassifier):
                 best_loss = loss
                 best_coef = self.coef_.copy()
             
-            # Update coef
-            # self.coef_ = self.coef_ - self.eta0 * gradient
-
             # Print training performance
             score = self.score(X, y)
             if self.verbose:

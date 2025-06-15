@@ -2,6 +2,7 @@ import random
 from numpy.typing import NDArray
 import numpy as np
 
+
 def init_centers(n_clusters: int, data: NDArray):
     centers = np.asarray(random.sample(list(data), k = n_clusters))
     centers = centers[np.argsort(centers[:, 0].ravel()), :]

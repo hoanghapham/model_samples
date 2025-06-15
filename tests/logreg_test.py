@@ -1,5 +1,5 @@
 import unittest
-from model_samples.logreg import LogisticRegression
+from model_samples.numpy.logreg import LogisticRegression
 import numpy as np
 
 class TestLogisticRegression(unittest.TestCase):

@@ -1,5 +1,6 @@
 import numpy as np
 
+
 class FeedForwardNeuralNetwork:
     def __init__(
             self, 

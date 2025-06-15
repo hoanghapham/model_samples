@@ -1,5 +1,5 @@
 import unittest
-from model_samples.linreg import LinearRegression
+from model_samples.numpy.linreg import LinearRegression
 import numpy as np
 
 

@@ -1,5 +1,5 @@
 import unittest
-from model_samples.kmeans import NaiveKMeans
+from model_samples.numpy.kmeans import NaiveKMeans
 import numpy as np
 
 

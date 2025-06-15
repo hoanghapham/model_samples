@@ -1,6 +1,7 @@
 import unittest
-from model_samples.nn import FeedForwardNeuralNetwork
+from model_samples.numpy.nn import FeedForwardNeuralNetwork
 import numpy as np
+
 
 class TestFeedForwardNeuralNetwork(unittest.TestCase):
 
